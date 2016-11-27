@@ -1,0 +1,12 @@
+version: '2'
+services:
+    cards:
+        image: arsn/cards-server
+        ports:
+            - "8080:8080"
+    nginx:
+        build: ./nginx
+        volumes_from:
+            - cards
+        ports:
+            - "80:80"
