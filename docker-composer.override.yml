@@ -1,0 +1,9 @@
+version: '2'
+services:
+    cards:
+        image: php:7.0-cli
+        volumes:
+            - ../cards:/app
+        command: php /app/bin/cards-server.php
+        ports:
+            - "8080:8080"
